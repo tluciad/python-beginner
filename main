@@ -1,0 +1,5 @@
+#!/usr/bin/python3
+Aquatic = __import__('Acuatical').Aquatic
+
+goldfish = Aquatic("Pablo", "Fish", 2)
+print(goldfish)

@@ -1,0 +1,63 @@
+#!/usr/bin/python3
+
+class Aquatic:
+    """"""
+    
+    def __init__(self, name, specie, age=0):
+        self.name = name
+        self.specie = specie
+        self.age = age
+    
+    def __str__(self):
+        print("The name of the object is: ", self.name, "\n")
+        print("The specie of the object is: ", self.specie, "\n")
+        print("The age of the object is: ", str(self.age), "\n")
+        return "\n"
+    
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, value):
+        if not isinstance(value, str):
+            raise TypeError("Name must be a string")
+        self.__name = value
+        
+    @property
+    def specie(self):
+        return self.__specie
+
+    @specie.setter
+    def specie(self, value):
+        Species = ["Fish", "StarFish", "Whale", "Seal", "Crab"]
+        
+        if not isinstance(value, str):
+            raise TypeError("Specie must be a string")
+        if value not in Species:
+            raise ValueError("Specie must be a valid specie")
+
+        self.__specie = value
+
+    @property
+    def age(self):
+        return self.__age
+
+    @age.setter
+    def age(self, value):
+        if not isinstance(value, int):
+            raise TypeError("Age must be an integer")
+        self.__age = value
+    
+#    def move(self)
+    
+#    def show(self)
+    
+#    def sound(self)
+
+goldfish = Aquatic("Pablo", "Fish", 2)
+#goldfish.name = "Pablo"
+#goldfish.specie = "Fish"
+#goldfish.age = 2
+print(goldfish)
+#Crab
